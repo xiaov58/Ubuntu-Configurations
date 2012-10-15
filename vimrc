@@ -111,7 +111,7 @@ set tabstop=4
 " => Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set mapleader (default is \)
-let mapleader = "\"
+"let mapleader = "\"
 
 " add a new line without entering insert mode  ===============================================> <CR>
 map <CR> o<Esc>

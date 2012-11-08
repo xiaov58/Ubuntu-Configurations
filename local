@@ -6,3 +6,5 @@
 # Brightness
 echo 12 > /sys/class/backlight/acpi_video0/brightness
 
+killall ibus-daemon
+ibus-daemon -d

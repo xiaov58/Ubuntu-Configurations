@@ -85,10 +85,18 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias open='gnome-open'
 alias armgcc='arm-none-linux-gnueabi-gcc'
+alias open='gnome-open'
 alias c='xclip -sel clip'
-alias cvs='env CVS_RSH=ssh cvs -d wzheng4@timberlake.cse.buffalo.edu:/projects/dimitrio/CVS'
+alias cvl='env CVS_RSH=ssh cvs -d wzheng4@timberlake.cse.buffalo.edu:/projects/dimitrio/CVS'
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+alias v='gvim'
+
+
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -112,3 +120,5 @@ fi
 
 # PATH
 export PATH="$PATH:/home/xiaov/Documents/Tools/arm-2008q3/bin/"
+export PATH="$PATH:/home/xiaov/Documents/Tools/android-ndk-r8b/toolchains/arm-linux-androideabi-4.4.3/prebuilt/linux-x86/bin/"
+

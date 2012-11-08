@@ -1,0 +1,19 @@
+unmapAll
+
+map j scrollDown
+map k scrollUp
+map l scrollToTop
+map h scrollToBottom
+map i nextTab
+map u previousTab
+map n goBack
+map m goForward
+map , goPrevious
+map . goNext
+map p LinkHints.activateMode
+map o LinkHints.activateModeToOpenInNewTab
+map ; removeTab
+map a focusInput
+map / enterFindMode
+map f performFind
+map d performBackwardsFind

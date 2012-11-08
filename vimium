@@ -2,8 +2,8 @@ unmapAll
 
 map j scrollDown
 map k scrollUp
-map l scrollToTop
-map h scrollToBottom
+map K scrollToTop
+map J scrollToBottom
 map i nextTab
 map u previousTab
 map n goBack
@@ -17,3 +17,5 @@ map a focusInput
 map / enterFindMode
 map f performFind
 map d performBackwardsFind
+map h showHelp
+map l createTab

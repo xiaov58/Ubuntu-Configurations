@@ -1,0 +1,45 @@
+#####  System Configuration  #####
+
+1. Change host name
+$ {
+sudo nano /etc/hostname
+sudo nano /etc/hosts
+sudo reboot
+}
+
+2. Remove mail icon
+$ {
+sudo apt-get autoremove indicator-messages
+}
+#recover
+$ {
+sudo apt-get install indicator-messages
+}    
+
+3. Adjsut screen brightness
+$ {
+sudo nano /etc/rc.local
+} 
+@ add before "exit 0"
+	sleep 2 #this is necessary
+	echo 12 > /sys/class/backlight/acpi_video0/brightness
+	
+4. Start up item 
+: "~/XXXX" will not take effect, should use "/home/xiaov/XXX" 
+
+5. Gvim open issue
+: "gvim -f", it is caused by gvim has no global menu.
+
+
+##### Shell #####
+1. &&
+: "&&" can be use to check if a command is successfully executed. If the previous one fails, the following one will not be executed.
+
+2. $0, $1, $2
+: first parameter, second parameter, third parameter
+
+3. $#
+: number of parameters, count from 0.
+
+4. $?
+: exit status

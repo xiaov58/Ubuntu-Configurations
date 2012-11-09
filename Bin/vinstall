@@ -1,0 +1,14 @@
+#! /bin/bash
+
+# check parameter
+if [ $# -ne 1 ]
+then
+    echo Parameter required! >& 2
+    echo Usage: vinstall XXXXX >& 2
+    exit 1
+fi
+
+# execution 
+sudo apt-get install $1 && echo sudo apt-get install $1 >> ~/Config/Log/apt-get
+exit 0
+

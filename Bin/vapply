@@ -1,0 +1,47 @@
+#! /bin/bash 
+
+# Usage: vapply
+# apply configurations 
+# ~/.bashrc  ->   ~/Config/bashrc
+# ~/.vimrc  ->  ~/Config/Vim/vimrc
+# ~/.vim  ->  ~/Config/Vim/vimZ
+# /etc/rc.local  ->  ~/Config/rc.local
+
+# check parameter
+if [ $# -ge 1 ]
+then
+        echo Usage: vapply >& 2
+        exit 1
+fi
+
+# execution
+
+# apt-get installation
+~/Config/Log/apt-get
+
+# .bashrc
+rm ~/.bashrc
+cp ~/Config/bashrc ~/Config/Bin
+mv ~/Config/Bin/bashrc ~/Config/Bin/.bashrc
+mv ~/Config/Bin/.bashrc  ~
+sleep 2
+source ~/.bashrc
+
+# .vimrc
+rm ~/.vimrc
+cp ~/Config/Vim/vimrc ~/Config/Bin
+mv ~/Config/Bin/vimrc ~/Config/Bin/.vimrc
+mv ~/Config/Bin/.vimrc  ~
+
+# .vim
+rm -r ~/.vim
+cp -r ~/Config/Vim/vim ~/Config/Bin
+mv ~/Config/Bin/vim ~/Config/Bin/.vim
+mv ~/Config/Bin/.vim  ~
+
+
+# rc.local
+sudo rm /etc/rc.local
+sudo cp ~/Config/rc.local /etc/
+
+exit 0

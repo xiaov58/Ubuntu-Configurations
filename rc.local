@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh -e
 #
 # rc.local
 #
@@ -11,4 +11,6 @@
 #
 # By default this script does nothing.
 
+sleep 2
+echo 12 > /sys/class/backlight/acpi_video0/brightness
 exit 0

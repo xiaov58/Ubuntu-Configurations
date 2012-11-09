@@ -1,0 +1,71 @@
+#####  General modification  #####
+
+1. Change appearance
+@Super-> Appearance :
+	-> Look : Theme(Radiance)
+	-> Behavior : auto hide launcher
+@Super -> User Accounts : change headimage
+
+2. Dowload "Chrome", "Gvim", "Adobe Flash Plugin", Delete "Bluetooth Management"
+@Super-> Software Center
+
+3. Change some shortcuts
+@Super-> keyboard -> Shorcuts :
+	Disble "Alt" for UHD
+	"Alt + Q" for close window
+	"Alt + W" for maximize window(toggle)
+	"Alt + E" for move window
+	"Alt + R" for minimize window
+
+4. Delete useless folders
+: keep "Backup", "Config", "Desktop", "Documents", "Downloads"
+
+5. Enable Pinyin input method
+@Super -> Keyboard Input Method -> Input Method : add "Chinese Pinyin"
+@Super -> Language Support -> Keyboard input method system : "ibus"
+
+6. Chrome sychronization
+
+7. Swap "Ctrl" and "CapLock"
+@Super -> Keyboard Layout -> option.. -> Ctrl key position -> Swap Ctrl and CapsLock 
+
+8. Termianl setting
+@Super -> Terminal :
+	Edit -> Keyboard Shortcuts : 
+		disable menu access keys
+		disable the menu shortcut key
+	
+	Edit -> Profile Preferences
+		-> General : Font(Ubuntu Mono Bold Italic, 15)
+		-> Color : Background(White)
+		-> Background : Transparent background 
+		-> Scrolling : Scrolling back(ulimited)
+
+9. Install Dropbox
+$ {
+cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86" | tar xzf -
+~/.dropbox-dist/dropboxd
+}
+
+10. Setup git
+$ {
+ssh-keygen -t rsa
+cd ~/.ssh
+sudo apt-get install xclip
+xclip -sel clip < ~/.ssh/id_rsa.pub
+}
+@ add SSH key to github
+
+11. Apply other config
+$ {
+~/Config/Bin/vapply
+}
+
+12. Startup items
+@Super -> Startup Applications :
+	Dropbox : /home/xiaov/.dropbox-dist/dropboxd
+	Terminal : gnome-terminal --maximize
+$ {
+sudo reboot
+}
+

@@ -1,0 +1,49 @@
+#! /bin/bash 
+
+# Usage: vupdate apt/config/all
+
+# check parameter
+if [ $# -ne 1 ]
+then
+	echo Parameter required! >& 2
+	echo Usage: vupdate apt/config/all >& 2
+	exit 1
+fi
+
+# execution
+case $1 in
+apt)
+	#echo vupdate apt
+	sudo apt-get update && sudo apt-get upgrade
+	;;
+config)
+	#echo vupdate config
+	
+	# .bashrc
+	rm ~/Config/bashrc
+	cp ~/.bashrc ~/Config
+	mv ~/Config/.bashrc ~/Config/bashrc
+
+	# Vim
+	rm ~/Config/Vim/vimrc
+	rm -rf ~/Config/Vim/vim
+	cp ~/.vimrc ~/Config/Vim
+	cp -r ~/.vim ~/Config/Vim
+	mv ~/Config/Vim/.vimrc ~/Config/Vim/vimrc
+	mv ~/Config/Vim/.vim ~/Config/Vim/vim 	
+
+	# rc.local
+	rm ~/Config/rc.local
+	cp /etc/rc.local ~/Config/rc.local
+	;;
+all) 
+	#echo vupdate all
+	./vupdate apt
+	./vupdate config
+	;;
+*)
+	echo $1: Unknown parameter >& 2
+	echo Usage: vupdate apt/config/all >& 2
+	exit 1
+esac
+exit 0

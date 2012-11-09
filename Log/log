@@ -69,3 +69,6 @@ $ {
 sudo reboot
 }
 
+
+##### USRP #####
+wget http://www.sbrac.org/files/build-gnuradio && chmod a+x ./build-gnuradio && ./build-gnuradio

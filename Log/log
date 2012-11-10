@@ -8,6 +8,7 @@
 
 2. Dowload "Chrome", "Gvim", "Adobe Flash Plugin", Delete "Bluetooth Management"
 @Super-> Software Center
+@ Chrome synchronization
 
 3. Change some shortcuts
 @Super-> keyboard -> Shorcuts :
@@ -24,7 +25,8 @@
 @Super -> Keyboard Input Method -> Input Method : add "Chinese Pinyin"
 @Super -> Language Support -> Keyboard input method system : "ibus"
 
-6. Chrome sychronization
+6. Add printer
+@Super -> Printing -> Add -> Network Printer -> Find Network Printer : 128.205.35.56
 
 7. Swap "Ctrl" and "CapLock"
 @Super -> Keyboard Layout -> option.. -> Ctrl key position -> Swap Ctrl and CapsLock 

@@ -4,6 +4,7 @@ sudo apt-get install git
 cd ~
 mkdir Config
 mkdir Backup
+mkdir .trash
 git clone git@github.com:xiaov58/Ubuntu-Configurations.git Config
 }
 @ Follow the instruction in Config/Log/log

@@ -106,7 +106,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# PATH
+# My PATH
 export PATH="$PATH:/home/xiaov/Config/Bin/"
 
 # My alias
@@ -121,3 +121,28 @@ alias ......="cd ../../../../.."
 alias vi='gvim -f'
 alias tip='vi ~/Config/Log/tip'
 alias log='vi ~/Config/Log/log'
+alias lapt='cat ~/Config/Log/apt-get'
+
+# My scripts
+## Trash
+alias rm=Trash    
+alias lt=ListTrash  
+alias ct=ClearTrash 
+alias ur=UndoRemove  
+UndoRemove()  
+{  
+  mv -i ~/.trash/$@ ./  
+}  
+Trash()  
+{  
+  mv $@ ~/.trash/  
+}  
+ListTrash()
+{
+    ls ~/.trash 
+}
+ClearTrash()  
+{  
+    read -p "clear sure?[n]" confirm  
+    [ $confirm == 'y' ] || [ $confirm == 'Y' ]  && /bin/rm -rf ~/.trash/*  
+}  

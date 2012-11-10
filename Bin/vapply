@@ -6,6 +6,7 @@
 # ~/.vimrc  ->  ~/Config/Vim/vimrc
 # ~/.vim  ->  ~/Config/Vim/vimZ
 # /etc/rc.local  ->  ~/Config/rc.local
+# /etc/network/interfaces ->  ~/Config/interfaces
 
 # check parameter
 if [ $# -ge 1 ]
@@ -39,9 +40,12 @@ cp -r ~/Config/Vim/vim ~/Config/Bin
 mv ~/Config/Bin/vim ~/Config/Bin/.vim
 mv ~/Config/Bin/.vim  ~
 
-
 # rc.local
 sudo rm /etc/rc.local
 sudo cp ~/Config/rc.local /etc/
+
+# interfaces
+sudo rm /etc/network/interfaces
+sudo cp ~/Config/interfaces /etc/network/
 
 exit 0

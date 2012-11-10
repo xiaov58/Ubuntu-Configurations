@@ -19,12 +19,12 @@ apt)
 config)
 	#echo vupdate config
 	
-	# .bashrc
+	## .bashrc
 	rm ~/Config/bashrc
 	cp ~/.bashrc ~/Config
 	mv ~/Config/.bashrc ~/Config/bashrc
 
-	# Vim
+	## Vim
 	rm ~/Config/Vim/vimrc
 	rm -rf ~/Config/Vim/vim
 	cp ~/.vimrc ~/Config/Vim
@@ -32,9 +32,14 @@ config)
 	mv ~/Config/Vim/.vimrc ~/Config/Vim/vimrc
 	mv ~/Config/Vim/.vim ~/Config/Vim/vim 	
 
-	# rc.local
+	## rc.local
 	rm ~/Config/rc.local
 	cp /etc/rc.local ~/Config/rc.local
+
+    ## interfaces
+    rm ~/Config/interfaces
+    cp /etc/network/interfaces ~/Config/interfaces
+
 	;;
 all) 
 	#echo vupdate all

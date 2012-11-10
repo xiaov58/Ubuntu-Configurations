@@ -122,6 +122,9 @@ alias vi='gvim -f'
 alias tip='vi ~/Config/Log/tip'
 alias log='vi ~/Config/Log/log'
 alias lapt='cat ~/Config/Log/apt-get'
+alias ssh1='ssh wzheng4@timberlake.cse.buffalo.edu'
+alias ssh2='ssh ub@french-vanilla.cse.buffalo.edu'
+alias ssh3='ssh ub@caffe-misto.cse.buffalo.edu'
 
 # My scripts
 ## Trash

@@ -8,6 +8,7 @@
 # ~/.vim  ->  ~/Config/Vim/vim
 # /etc/rc.local  ->  ~/Config/rc.local
 # /etc/network/interfaces ->  ~/Config/interfaces
+# /usr/share/X11/xkb/symbols/us -> ~/Config/us
 
 
 # check parameter
@@ -109,6 +110,20 @@ then
     echo apply .Xmodmap done.
 else
     echo .Xmodmap is up to date.
+fi 
+
+
+# us
+echo checking us ...
+diff /usr/share/X11/xkb/symbols/us ~/Config/us > /dev/null
+if [ $? = 1 ]
+then
+    echo applying us ...    
+    sudo rm /usr/share/X11/xkb/symbols/us
+    sudo cp ~/Config/us /usr/share/X11/xkb/symbols/
+    echo apply us done.
+else
+    echo us is up to date.
 fi 
 
 exit 0

@@ -18,6 +18,7 @@ git clone git@github.com:xiaov58/Ubuntu-Configurations.git Config
 ~/.vim  ->  ~/Config/Vim/vim
 /etc/rc.local  ->  ~/Config/rc.local
 /etc/network/interfaces  -> ~/Config/interfaces
+/usr/share/X11/xkb/symbols/us  -> ~/Config/us
 
 
 

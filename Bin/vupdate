@@ -95,4 +95,18 @@ else
     echo .Xmodmap is up to date.
 fi
 
+
+## us
+echo checking us ...
+diff /usr/share/X11/xkb/symbols/us ~/Config/us > /dev/null
+if [ $? = 1 ]
+then
+    echo updating us ... 
+    rm ~/Config/us
+    cp /usr/share/X11/xkb/symbols/us ~/Config/us
+    echo updating us done.
+else 
+    echo us is up to date.
+fi
+
 exit 0

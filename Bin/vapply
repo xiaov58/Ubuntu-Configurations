@@ -2,11 +2,13 @@
 
 # Usage: vapply
 # apply configurations 
+# ~/.Xmodmap  ->  ~/Config/Xmodmap
 # ~/.bashrc  ->   ~/Config/bashrc
 # ~/.vimrc  ->  ~/Config/Vim/vimrc
-# ~/.vim  ->  ~/Config/Vim/vimZ
+# ~/.vim  ->  ~/Config/Vim/vim
 # /etc/rc.local  ->  ~/Config/rc.local
 # /etc/network/interfaces ->  ~/Config/interfaces
+
 
 # check parameter
 if [ $# -ge 1 ]
@@ -21,31 +23,92 @@ fi
 ~/Config/Log/apt-get
 
 # .bashrc
-rm ~/.bashrc
-cp ~/Config/bashrc ~/Config/Bin
-mv ~/Config/Bin/bashrc ~/Config/Bin/.bashrc
-mv ~/Config/Bin/.bashrc  ~
-sleep 2
-source ~/.bashrc
+echo checking .bashrc ...
+diff ~/.bashrc ~/Config/bashrc > /dev/null
+if [ $? = 1 ]
+then
+    echo applying .bashrc ...    
+    rm ~/.bashrc
+    cp ~/Config/bashrc ~/Config/Bin
+    mv ~/Config/Bin/bashrc ~/Config/Bin/.bashrc
+    mv ~/Config/Bin/.bashrc  ~
+    sleep 2
+    source ~/.bashrc
+    echo apply .bashrc done.
+else
+    echo .bashrc is up to date.
+fi 
 
 # .vimrc
-rm ~/.vimrc
-cp ~/Config/Vim/vimrc ~/Config/Bin
-mv ~/Config/Bin/vimrc ~/Config/Bin/.vimrc
-mv ~/Config/Bin/.vimrc  ~
+echo checking .vimrc ...
+diff ~/.vimrc ~/Config/Vim/vimrc > /dev/null
+if [ $? = 1 ]
+then
+    echo applying .vimrc ...    
+    rm ~/.vimrc
+    cp ~/Config/Vim/vimrc ~/Config/Bin
+    mv ~/Config/Bin/vimrc ~/Config/Bin/.vimrc
+    mv ~/Config/Bin/.vimrc  ~
+    echo apply .vimrc done.
+else
+    echo .bashrc is up to date.
+fi 
 
 # .vim
-rm -r ~/.vim
-cp -r ~/Config/Vim/vim ~/Config/Bin
-mv ~/Config/Bin/vim ~/Config/Bin/.vim
-mv ~/Config/Bin/.vim  ~
+echo checking .vim ...
+diff -r ~/.vim ~/Config/Vim/vim > /dev/null
+if [ $? = 1 ]
+then
+    echo applying .vim ...    
+    rm -r ~/.vim
+    cp -r ~/Config/Vim/vim ~/Config/Bin
+    mv ~/Config/Bin/vim ~/Config/Bin/.vim
+    mv ~/Config/Bin/.vim  ~
+    echo apply .vim done.
+else
+    echo .vim is up to date.
+fi 
 
 # rc.local
-sudo rm /etc/rc.local
-sudo cp ~/Config/rc.local /etc/
+echo checking rc.local ...
+diff /etc/rc.local ~/Config/rc.local > /dev/null
+if [ $? = 1 ]
+then
+    echo applying rc.local ...    
+    sudo rm /etc/rc.local
+    sudo cp ~/Config/rc.local /etc/
+    echo apply rc.local done.
+else
+    echo rc.local is up to date.
+fi 
 
 # interfaces
-sudo rm /etc/network/interfaces
-sudo cp ~/Config/interfaces /etc/network/
+echo checking interfaces ...
+diff /etc/network/interfaces ~/Config/interfaces > /dev/null
+if [ $? = 1 ]
+then
+    echo applying interfaces ...    
+    sudo rm /etc/network/interfaces
+    sudo cp ~/Config/interfaces /etc/network/
+    echo apply interfaces done.
+else
+    echo interfaces is up to date.
+fi 
+
+# .Xmodmap
+echo checking .Xmodmap ...
+diff ~/.Xmodmap ~/Config/Xmodmap > /dev/null
+if [ $? = 1 ]
+then
+    echo applying .Xmodmap ...    
+    rm ~/.Xmodmap
+    cp ~/Config/Xmodmap ~/Config/Bin
+    mv ~/Config/Bin/Xmodmap ~/Config/Bin/.Xmodmap
+    mv ~/Config/Bin/.Xmodmap  ~
+    xmodmap ~/.Xmodmap
+    echo apply .Xmodmap done.
+else
+    echo .Xmodmap is up to date.
+fi 
 
 exit 0

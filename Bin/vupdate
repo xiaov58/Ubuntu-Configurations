@@ -3,52 +3,96 @@
 # Usage: vupdate apt/config/all
 
 # check parameter
-if [ $# -ne 1 ]
+if [ $# -ge 1 ]
 then
-	echo Parameter required! >& 2
-	echo Usage: vupdate apt/config/all >& 2
+	echo Usage: vupdate >& 2
 	exit 1
 fi
 
 # execution
-case $1 in
-apt)
-	#echo vupdate apt
-	sudo apt-get update && sudo apt-get upgrade
-	;;
-config)
-	#echo vupdate config
-	
-	## .bashrc
+## .bashrc
+echo checking .bashrc ...
+diff ~/.bashrc ~/Config/bashrc > /dev/null
+if [ $? = 1 ]
+then
+    echo updating .bashrc ... 
 	rm ~/Config/bashrc
 	cp ~/.bashrc ~/Config
 	mv ~/Config/.bashrc ~/Config/bashrc
+    echo updating .bashrc done.
+else 
+    echo .bashrc is up to date.
+fi
 
-	## Vim
+
+## .vimrc
+echo checking .vimrc ...
+diff ~/.vimrc ~/Config/Vim/vimrc > /dev/null
+if [ $? = 1 ]
+then
+    echo updating .vimrc ... 
 	rm ~/Config/Vim/vimrc
-	rm -rf ~/Config/Vim/vim
 	cp ~/.vimrc ~/Config/Vim
-	cp -r ~/.vim ~/Config/Vim
 	mv ~/Config/Vim/.vimrc ~/Config/Vim/vimrc
-	mv ~/Config/Vim/.vim ~/Config/Vim/vim 	
+    echo updating .vimrc done.
+else 
+    echo .vimrc is up to date.
+fi
 
-	## rc.local
+
+## .vim
+echo checking .vim ...
+diff -r ~/.vim ~/Config/Vim/vim > /dev/null
+if [ $? = 1 ]
+then
+    echo updating .vim ... 
+	rm -rf ~/Config/Vim/vim
+	cp -r ~/.vim ~/Config/Vim
+	mv ~/Config/Vim/.vim ~/Config/Vim/vim 	
+    echo updating .vim done.
+else 
+    echo .vim is up to date.
+fi
+
+
+## rc.local
+echo checking rc.local ...
+diff /etc/rc.local ~/Config/rc.local > /dev/null
+if [ $? = 1 ]
+then
+    echo updating rc.local ... 
 	rm ~/Config/rc.local
 	cp /etc/rc.local ~/Config/rc.local
+    echo updating rc.local done.
+else 
+    echo rc.local is up to date.
+fi
 
-    ## interfaces
+## interfaces
+echo checking interfaces ...
+diff /etc/network/interfaces ~/Config/interfaces > /dev/null
+if [ $? = 1 ]
+then
+    echo updating interfaces ... 
     rm ~/Config/interfaces
     cp /etc/network/interfaces ~/Config/interfaces
+    echo updating interfaces done.
+else 
+    echo interfaces is up to date.
+fi
 
-	;;
-all) 
-	#echo vupdate all
-	./vupdate apt
-	./vupdate config
-	;;
-*)
-	echo $1: Unknown parameter >& 2
-	echo Usage: vupdate apt/config/all >& 2
-	exit 1
-esac
+## .Xmodmap
+echo checking .Xmodmap ...
+diff ~/.Xmodmap ~/Config/Xmodmap > /dev/null
+if [ $? = 1 ]
+then
+    echo updating .Xmodmap ... 
+	rm ~/Config/Xmodmap
+	cp ~/.Xmodmap ~/Config
+	mv ~/Config/.Xmodmap ~/Config/Xmodmap
+    echo updating .Xmodmap done.
+else 
+    echo .Xmodmap is up to date.
+fi
+
 exit 0

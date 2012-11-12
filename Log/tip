@@ -42,4 +42,6 @@ sudo nano /etc/rc.local
 : number of parameters, count from 0.
 
 4. $?
-: exit status
+: exit status of last command
+
+

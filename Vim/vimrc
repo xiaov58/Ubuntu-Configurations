@@ -52,7 +52,7 @@ filetype indent on
 " => User Interface 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Cursor no not blink
-set gcr=a:block-blinkon0
+set gcr=n:block-blinkon0,i:ver25-blinkon0,v:hor20-blinkon0
 
 " Do not wrap
 set nowrap
@@ -121,8 +121,21 @@ set tabstop=4
 " => Mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set mapleader (default is \)
-let mapleader = ";"
+"let mapleader = "\"
 
+" Use ; replace : to enter command mode  ========================================================> ;
+noremap ; :
+
+" Copy and Paste with clipboard  =====================================================> <C-p>  <C-c>
+noremap <C-p> "+p  
+noremap! <C-p> <Esc>"+pa
+noremap <C-c> "+y  
+noremap! <C-c> <Esc>"+ya
+
+" Go to line head and end
+noremap <C-h> 0
+noremap! <C-h> <Esc>0i
+    
 " Use <S-CR> go to the EOL  ================================================================> <S-CR>
 noremap! <S-CR> <Esc>A
 
@@ -165,7 +178,7 @@ noremap! <F5> <Esc>:TlistToggle<CR>li
 " jump to the middle of brackets
 imap () ()<Left>
 imap [] []<Left>
-imap {} {}<Left><CR><UP><RIGHT><CR><TAB>
+imap {} {}<Left><CR><UP><Esc>A<CR><TAB>
 imap <> <><Left>
 imap "" ""<Left>
 imap '' ''<Left>

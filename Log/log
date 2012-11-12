@@ -1,35 +1,47 @@
 #####  General modification  #####
 
-1. Change appearance
+1. Apply other config
+$ {
+~/Config/Bin/vapply
+}
+
+2. Change appearance
 @Super-> Appearance :
-	-> Look : Theme(Radiance)
-	-> Behavior : auto hide launcher
+	-> Look: Theme("Radiance")
+	-> Behavior: auto hide launcher
 @Super -> User Accounts : change headimage
 
-2. Dowload "Chrome", "Gvim", "Adobe Flash Plugin", Delete "Bluetooth Management"
+3. Dowload "Chrome", "Gvim", "Adobe Flash Plugin", Delete "Bluetooth Management"
 @Super-> Software Center
-@ Chrome synchronization
+@ Chrome synchronization and Vimium setup
 
-3. Change some shortcuts
+4. Change some shortcuts
 @Super-> keyboard -> Shorcuts :
-	Disble "Alt" for UHD
-	"Alt + Q" for close window
-	"Alt + W" for maximize window(toggle)
-	"Alt + E" for move window
-	"Alt + R" for minimize window
+	Launcher: disble all
+    Navigation: disble all
+        Hide all normal windows: "Super + D" 
+    Screenshots: skip
+    Sounds and Media: skip
+    System: skip
+    Universal Access: disable all
+        Toggle maximaztion state: "Alt + W"
+        Close window: "Alt + Q"
+        Move window: "Alt + E"
+        Resize window: "Alt + R"
 
-4. Delete useless folders
+@Super -> ccsm -> Windows Management -> Grid :
+    -> put left: <Primary><Super>h
+    -> put left: <Primary><Super>l
+
+5. Delete useless folders
 : keep "Backup", "Config", "Desktop", "Documents", "Downloads"
 
-5. Enable Pinyin input method
+6. Enable Pinyin input method
 @Super -> Keyboard Input Method -> Input Method : add "Chinese Pinyin"
 @Super -> Language Support -> Keyboard input method system : "ibus"
 
-6. Add printer
-@Super -> Printing -> Add -> Network Printer -> Find Network Printer : 128.205.35.56
-
-7. Swap "Ctrl" and "CapLock"
-@Super -> Keyboard Layout -> option.. -> Ctrl key position -> Swap Ctrl and CapsLock 
+7. Add printer
+@Super -> Printing -> Add -> Network Printer -> Find Network Printer : "128.205.35.56"
 
 8. Termianl setting
 @Super -> Terminal :
@@ -38,30 +50,32 @@
 		disable the menu shortcut key
 	
 	Edit -> Profile Preferences
-		-> General : Font(Ubuntu Mono Bold Italic, 15)
-		-> Color : Background(White)
+		-> General : Font("Ubuntu Mono Bold Italic", "15")
+		-> Color : Background("White")
 		-> Background : Transparent background 
-		-> Scrolling : Scrolling back(ulimited)
+		-> Scrolling : Scrolling back("ulimited")
 
-9. Install Dropbox
+9. Install sdcv
 $ {
+# sdcv
+tar -xvf stardict-langdao-ce-gb-2.4.2.tar.bz2 -C ~/.stardict/dic/
+tar -xvf stardict-langdao-ec-gb-2.4.2.tar.bz2 -C ~/.stardict/dic/
+}
+
+10. Install Dropbox
+$ {
+# Dropbox
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86" | tar xzf -
 ~/.dropbox-dist/dropboxd
 }
 
-10. Setup git
+11. Setup git
 $ {
 ssh-keygen -t rsa
 cd ~/.ssh
-sudo apt-get install xclip
 xclip -sel clip < ~/.ssh/id_rsa.pub
 }
 @ add SSH key to github
-
-11. Apply other config
-$ {
-~/Config/Bin/vapply
-}
 
 12. Startup items
 @Super -> Startup Applications :
@@ -73,4 +87,9 @@ sudo reboot
 
 
 ##### USRP #####
+$ {
+mkdir Src
+cd Src
 wget http://www.sbrac.org/files/build-gnuradio && chmod a+x ./build-gnuradio && ./build-gnuradio
+}
+

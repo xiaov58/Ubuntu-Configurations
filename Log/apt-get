@@ -1,2 +1,7 @@
 sudo apt-get install exuberant-ctags
 sudo apt-get install cvs
+sudo apt-get install rar
+sudo apt-get install openjdk-7-jdk
+sudo apt-get install compizconfig-settings-manager
+sudo apt-get install xclip
+sudo apt-get install sdcv

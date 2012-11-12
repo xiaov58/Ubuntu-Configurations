@@ -19,7 +19,7 @@ then
 	rm ~/Config/bashrc
 	cp ~/.bashrc ~/Config
 	mv ~/Config/.bashrc ~/Config/bashrc
-    echo updating .bashrc done.
+    echo updating .bashrc DONE!!!
 else 
     echo .bashrc is up to date.
 fi
@@ -34,7 +34,7 @@ then
 	rm ~/Config/Vim/vimrc
 	cp ~/.vimrc ~/Config/Vim
 	mv ~/Config/Vim/.vimrc ~/Config/Vim/vimrc
-    echo updating .vimrc done.
+    echo updating .vimrc DONE!!!
 else 
     echo .vimrc is up to date.
 fi
@@ -49,7 +49,7 @@ then
 	rm -rf ~/Config/Vim/vim
 	cp -r ~/.vim ~/Config/Vim
 	mv ~/Config/Vim/.vim ~/Config/Vim/vim 	
-    echo updating .vim done.
+    echo updating .vim DONE!!!
 else 
     echo .vim is up to date.
 fi
@@ -63,7 +63,7 @@ then
     echo updating rc.local ... 
 	rm ~/Config/rc.local
 	cp /etc/rc.local ~/Config/rc.local
-    echo updating rc.local done.
+    echo updating rc.local DONE!!!
 else 
     echo rc.local is up to date.
 fi
@@ -76,7 +76,7 @@ then
     echo updating interfaces ... 
     rm ~/Config/interfaces
     cp /etc/network/interfaces ~/Config/interfaces
-    echo updating interfaces done.
+    echo updating interfaces DONE!!!
 else 
     echo interfaces is up to date.
 fi
@@ -90,7 +90,7 @@ then
 	rm ~/Config/Xmodmap
 	cp ~/.Xmodmap ~/Config
 	mv ~/Config/.Xmodmap ~/Config/Xmodmap
-    echo updating .Xmodmap done.
+    echo updating .Xmodmap DONE!!!
 else 
     echo .Xmodmap is up to date.
 fi
@@ -104,7 +104,7 @@ then
     echo updating us ... 
     rm ~/Config/us
     cp /usr/share/X11/xkb/symbols/us ~/Config/us
-    echo updating us done.
+    echo updating us DONE!!!
 else 
     echo us is up to date.
 fi

@@ -35,7 +35,7 @@ then
     mv ~/Config/Bin/.bashrc  ~
     sleep 2
     source ~/.bashrc
-    echo apply .bashrc done.
+    echo apply .bashrc DONE!!!
 else
     echo .bashrc is up to date.
 fi 
@@ -50,7 +50,7 @@ then
     cp ~/Config/Vim/vimrc ~/Config/Bin
     mv ~/Config/Bin/vimrc ~/Config/Bin/.vimrc
     mv ~/Config/Bin/.vimrc  ~
-    echo apply .vimrc done.
+    echo apply .vimrc DONE!!!
 else
     echo .bashrc is up to date.
 fi 
@@ -65,7 +65,7 @@ then
     cp -r ~/Config/Vim/vim ~/Config/Bin
     mv ~/Config/Bin/vim ~/Config/Bin/.vim
     mv ~/Config/Bin/.vim  ~
-    echo apply .vim done.
+    echo apply .vim DONE!!!
 else
     echo .vim is up to date.
 fi 
@@ -78,7 +78,7 @@ then
     echo applying rc.local ...    
     sudo rm /etc/rc.local
     sudo cp ~/Config/rc.local /etc/
-    echo apply rc.local done.
+    echo apply rc.local DONE!!!
 else
     echo rc.local is up to date.
 fi 
@@ -91,7 +91,7 @@ then
     echo applying interfaces ...    
     sudo rm /etc/network/interfaces
     sudo cp ~/Config/interfaces /etc/network/
-    echo apply interfaces done.
+    echo apply interfaces DONE!!!
 else
     echo interfaces is up to date.
 fi 
@@ -107,7 +107,7 @@ then
     mv ~/Config/Bin/Xmodmap ~/Config/Bin/.Xmodmap
     mv ~/Config/Bin/.Xmodmap  ~
     xmodmap ~/.Xmodmap
-    echo apply .Xmodmap done.
+    echo apply .Xmodmap DONE!!!
 else
     echo .Xmodmap is up to date.
 fi 
@@ -121,7 +121,7 @@ then
     echo applying us ...    
     sudo rm /usr/share/X11/xkb/symbols/us
     sudo cp ~/Config/us /usr/share/X11/xkb/symbols/
-    echo apply us done.
+    echo apply us DONE!!!
 else
     echo us is up to date.
 fi 

@@ -132,10 +132,6 @@ noremap! <C-p> <Esc>"+pa
 noremap <C-c> "+y  
 noremap! <C-c> <Esc>"+ya
 
-" Go to line head and end
-noremap <C-h> 0
-noremap! <C-h> <Esc>0i
-    
 " Use <S-CR> go to the EOL  ================================================================> <S-CR>
 noremap! <S-CR> <Esc>A
 

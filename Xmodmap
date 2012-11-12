@@ -15,5 +15,5 @@ add mod5 = ISO_Level3_Shift
 
 ! Use ' instead Esc
 !keycode 49 = Escape asciitilde
-!keycode 9 = grave
+keycode 135 = Escape
 

@@ -143,7 +143,7 @@ Trash()
 }  
 ListTrash()
 {
-    ls ~/.trash 
+    ls -a ~/.trash 
 }
 ClearTrash()  
 {  

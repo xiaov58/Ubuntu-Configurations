@@ -12,4 +12,5 @@ interfaces
 bashrc
 /home/XXX/.bashrc
 
-
+stardict: for sdcv
+/home/XXX/.stardcit

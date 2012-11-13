@@ -58,8 +58,9 @@ $ {
 9. Install sdcv
 $ {
 # sdcv
-tar -xvf stardict-langdao-ce-gb-2.4.2.tar.bz2 -C ~/.stardict/dic/
-tar -xvf stardict-langdao-ec-gb-2.4.2.tar.bz2 -C ~/.stardict/dic/
+cp -r ~/Config/Backup/stardict ~/Config/Bin
+mv ~/Config/Bin/stardict ~/Config/Bin/.stardict
+mv ~/Config/Bin/.stardict ~
 }
 
 10. Install Dropbox

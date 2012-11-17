@@ -13,7 +13,6 @@ clear Lock
 keycode 37 = ISO_Level3_Shift
 add mod5 = ISO_Level3_Shift
 
-! Use ' instead Esc
-!keycode 49 = Escape asciitilde
-keycode 135 = Escape
+! Use Menu as Esc
+keycode 135 = Escape Menu
 

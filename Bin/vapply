@@ -30,9 +30,7 @@ if [ $? = 1 ]
 then
     echo applying .bashrc ...    
     rm ~/.bashrc
-    cp ~/Config/bashrc ~/Config/Bin
-    mv ~/Config/Bin/bashrc ~/Config/Bin/.bashrc
-    mv ~/Config/Bin/.bashrc  ~
+    cp ~/Config/bashrc ~/.bashrc
     sleep 2
     source ~/.bashrc
     echo apply .bashrc DONE!!!
@@ -47,9 +45,7 @@ if [ $? = 1 ]
 then
     echo applying .vimrc ...    
     rm ~/.vimrc
-    cp ~/Config/Vim/vimrc ~/Config/Bin
-    mv ~/Config/Bin/vimrc ~/Config/Bin/.vimrc
-    mv ~/Config/Bin/.vimrc  ~
+    cp ~/Config/Vim/vimrc ~/.vimrc
     echo apply .vimrc DONE!!!
 else
     echo .bashrc is up to date.
@@ -103,9 +99,7 @@ if [ $? = 1 ]
 then
     echo applying .Xmodmap ...    
     rm ~/.Xmodmap
-    cp ~/Config/Xmodmap ~/Config/Bin
-    mv ~/Config/Bin/Xmodmap ~/Config/Bin/.Xmodmap
-    mv ~/Config/Bin/.Xmodmap  ~
+    cp ~/Config/Xmodmap ~/.Xmodmap
     xmodmap ~/.Xmodmap
     echo apply .Xmodmap DONE!!!
 else

@@ -17,8 +17,7 @@ if [ $? = 1 ]
 then
     echo updating .bashrc ... 
 	rm ~/Config/bashrc
-	cp ~/.bashrc ~/Config
-	mv ~/Config/.bashrc ~/Config/bashrc
+	cp ~/.bashrc ~/Config/bashrc
     echo updating .bashrc DONE!!!
 else 
     echo .bashrc is up to date.
@@ -32,8 +31,7 @@ if [ $? = 1 ]
 then
     echo updating .vimrc ... 
 	rm ~/Config/Vim/vimrc
-	cp ~/.vimrc ~/Config/Vim
-	mv ~/Config/Vim/.vimrc ~/Config/Vim/vimrc
+	cp ~/.vimrc ~/Config/Vim/vimrc
     echo updating .vimrc DONE!!!
 else 
     echo .vimrc is up to date.
@@ -88,8 +86,7 @@ if [ $? = 1 ]
 then
     echo updating .Xmodmap ... 
 	rm ~/Config/Xmodmap
-	cp ~/.Xmodmap ~/Config
-	mv ~/Config/.Xmodmap ~/Config/Xmodmap
+	cp ~/.Xmodmap ~/Config/Xmodmap
     echo updating .Xmodmap DONE!!!
 else 
     echo .Xmodmap is up to date.

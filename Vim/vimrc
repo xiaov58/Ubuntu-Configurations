@@ -132,6 +132,10 @@ noremap! <C-p> <Esc>"+pa
 noremap <C-c> "+y  
 noremap! <C-c> <Esc>"+ya
 
+" Use <C-s> to do vsplit  ===================================================================> <C-s>
+noremap <C-s> :vsplit
+noremap! <C-s> <Esc>:vsplit
+
 " Use <S-CR> go to the EOL  ================================================================> <S-CR>
 noremap! <S-CR> <Esc>A
 

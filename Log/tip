@@ -1,4 +1,4 @@
-#####  System Configuration  #####
+#####  System #####
 
 1. Change host name
 $ {
@@ -11,7 +11,7 @@ sudo reboot
 $ {
 sudo apt-get autoremove indicator-messages
 }
-#recover
+  #recover
 $ {
 sudo apt-get install indicator-messages
 }    
@@ -30,6 +30,18 @@ sudo nano /etc/rc.local
 5. Gvim open issue
 : "gvim -f", it is caused by gvim has no global menu.
 
+6. Check hardware
+$ {
+sudo lshw
+}
+
+7. Copy: Ctrl + Insert; Paste: Shift + Insert
+
+8. Reboor ibus: 
+$ {
+killall ibus-daemon
+ibus-daemon -d
+}
 
 ##### Shell #####
 1. &&

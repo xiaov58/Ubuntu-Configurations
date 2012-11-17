@@ -5,3 +5,4 @@ sudo apt-get install openjdk-7-jdk
 sudo apt-get install compizconfig-settings-manager
 sudo apt-get install xclip
 sudo apt-get install sdcv
+sudo apt-get install tree

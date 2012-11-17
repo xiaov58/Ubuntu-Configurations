@@ -37,8 +37,11 @@ $ {
 : keep "Backup", "Config", "Desktop", "Documents", "Downloads"
 
 6. Enable Pinyin input method
-@Super -> Keyboard Input Method -> Input Method : add "Chinese Pinyin"
+@Super -> Keyboard Input Method:
+    -> General: Enable or disble "Control + Space"
+    -> Input Method: add "Chinese Pinyin"
 @Super -> Language Support -> Keyboard input method system : "ibus"
+
 
 7. Add printer
 @Super -> Printing -> Add -> Network Printer -> Find Network Printer : "128.205.35.56"

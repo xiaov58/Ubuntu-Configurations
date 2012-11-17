@@ -119,6 +119,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 alias vi='gvim -f'
+alias gdiff='gvimdiff -f'
 alias tip='vi ~/Config/Log/tip'
 alias log='vi ~/Config/Log/log'
 alias lapt='cat ~/Config/Log/apt-get'

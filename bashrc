@@ -108,6 +108,7 @@ fi
 
 # My PATH
 export PATH="$PATH:/home/xiaov/Config/Bin/"
+export PATH="$PATH:/home/xiaov/Documents/PhoneCap/SDK/adt-bundle-linux-x86/sdk/platform-tools"
 
 # My alias
 alias open='gnome-open'
@@ -149,7 +150,7 @@ ListTrash()
 ClearTrash()  
 {  
     read -p "clear sure?[n]" confirm  
-    [ $confirm == 'y' ] || [ $confirm == 'Y' ]  && /bin/rm -rf ~/.trash/*  
+    [ $confirm == 'y' ] || [ $confirm == 'Y' ]  && /bin/rm -rf ~/.trash/*  && /bin/rm -rf ~/.trash/.* 2> /dev/null
 }  
 
 ## SCP
@@ -165,3 +166,5 @@ scpfv()
 {
     scp ub@french-vanilla.cse.buffalo.edu:/home/belltestbed/$1 $2
 }
+
+

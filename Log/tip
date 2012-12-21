@@ -37,7 +37,7 @@ sudo lshw
 
 7. Copy: Ctrl + Insert; Paste: Shift + Insert
 
-8. Reboor ibus: 
+8. Reboot ibus: 
 $ {
 killall ibus-daemon
 ibus-daemon -d
@@ -56,4 +56,5 @@ ibus-daemon -d
 4. $?
 : exit status of last command
 
-
+##### Git #####
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"

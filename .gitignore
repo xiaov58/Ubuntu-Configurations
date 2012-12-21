@@ -1,0 +1,5 @@
+# ignore .vim/view which save the fold info for specific file
+/view
+
+# ignore .netrwhist which is generated when use vim explorer
+/.netrwhist

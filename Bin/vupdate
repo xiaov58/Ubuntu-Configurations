@@ -38,20 +38,31 @@ else
 fi
 
 
-## .vim
-echo checking .vim ...
-diff -r ~/.vim ~/Config/Vim/vim > /dev/null
+## .vim/doc
+echo checking .vim/doc ...
+diff -r ~/.vim/doc ~/Config/Vim/vim/doc > /dev/null
 if [ $? = 1 ]
 then
-    echo updating .vim ... 
-	rm -rf ~/Config/Vim/vim
-	cp -r ~/.vim ~/Config/Vim
-	mv ~/Config/Vim/.vim ~/Config/Vim/vim 	
-    echo updating .vim DONE!!!
+    echo updating .vim/doc ... 
+	rm -rf ~/Config/Vim/vim/doc
+	mv ~/Config/Vim/.vim/doc ~/Config/Vim/vim/doc 	
+    echo updating .vim/doc DONE!!!
 else 
-    echo .vim is up to date.
+    echo .vim/doc is up to date.
 fi
 
+## .vim/plugin
+echo checking .vim/plugin ...
+diff -r ~/.vim/plugin ~/Config/Vim/vim/plugin > /dev/null
+if [ $? = 1 ]
+then
+    echo updating .vim/plugin ... 
+	rm -rf ~/Config/Vim/vim/plugin
+	mv ~/Config/Vim/.vim/plugin ~/Config/Vim/vim/plugin 	
+    echo updating .vim/plugin DONE!!!
+else 
+    echo .vim/plugin is up to date.
+fi
 
 ## rc.local
 echo checking rc.local ...
@@ -90,6 +101,19 @@ then
     echo updating .Xmodmap DONE!!!
 else 
     echo .Xmodmap is up to date.
+fi
+
+## .csshrc
+echo checking .csshrc ...
+diff ~/.csshrc ~/Config/csshrc > /dev/null
+if [ $? = 1 ]
+then
+    echo updating .csshrc ... 
+	rm ~/Config/csshrc
+	cp ~/.csshrc ~/Config/csshrc
+    echo updating .csshrc DONE!!!
+else 
+    echo .csshrc is up to date.
 fi
 
 

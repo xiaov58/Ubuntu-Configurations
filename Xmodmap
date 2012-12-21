@@ -13,6 +13,14 @@ clear Lock
 keycode 37 = ISO_Level3_Shift
 add mod5 = ISO_Level3_Shift
 
+! Use Alt_R as modifier of arrow key
+remove mod1 = Alt_R
+keycode 108 = ISO_Level3_Shift
+add mod5 = ISO_Level3_Shift
+
 ! Use Menu as Esc
-keycode 135 = Escape Menu
+keycode 166 = Escape
+
+! Use ' as ESC
+keycode 49 = Escape asciitilde
 

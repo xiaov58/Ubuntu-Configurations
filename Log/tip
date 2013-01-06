@@ -43,6 +43,16 @@ killall ibus-daemon
 ibus-daemon -d
 }
 
+9. Install vmail:
+${
+vinstall ruby1.9.1-full
+vinstall rubygems
+vinstall sqlite3
+vinstall lynx
+vinstall libsqlite-dev 
+gem1.9.1 install vmail
+}
+
 ##### Shell #####
 1. &&
 : "&&" can be use to check if a command is successfully executed. If the previous one fails, the following one will not be executed.

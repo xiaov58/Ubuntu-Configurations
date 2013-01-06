@@ -54,8 +54,8 @@ $ {
 	-> Key bindings:
 		-> Next Window: 	<Alt> + Tab
 		-> Previous Window: <Shift> + <Alt> + Tab
-		-> Next Window(Group): 	<Alt> + A
-		-> Previous Window(Group): <Shift> + <Alt> + A
+		-> Next Window(Group): 	<Alt> + R
+		-> Previous Window(Group): <Shift> + <Alt> + R
 	
 	
 
@@ -123,29 +123,4 @@ cd Src
 wget http://www.sbrac.org/files/build-gnuradio && chmod a+x ./build-gnuradio && ./build-gnuradio
 }
 
-
-### install aircrack-ng ###
-Ubuntu 12.04以前版本，可以通过apt-get直接安装aircrack-ng，但12.04并不行，以下是在12.04上的安装方法。
-
-//安装依赖软件包
-sudo apt-get install build-essential libssl-dev iw
-
-//下载软件包并解压缩
-wget http://download.aircrack-ng.org/aircrack-ng-1.1.tar.gz
-tar -zxvf aircrack-ng-1.1.tar.gz
-cd aircrack-ng-1.1
-
-//进入目录后，用VI编辑器打开 common.mak,修改下面的行:
-CFLAGS ?= -g -W -Wall -Werror -O3
-
-//修改后的结果：
-CFLAGS ?= -g -W -Wall -O3
-
-//执行安装
-make
-sudo make install
-sudo airodump-ng-oui-update
-
-
-#### Android ####
 

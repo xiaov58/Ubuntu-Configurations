@@ -109,6 +109,7 @@ fi
 # My PATH
 export PATH="$PATH:/home/xiaov/Config/Bin/"
 export PATH="$PATH:/home/xiaov/Documents/PhoneCap/SDK/adt-bundle-linux-x86/sdk/platform-tools"
+export PATH="$PATH:/home/xiaov/Documents/Eclipse/eclipse"
 
 # My alias
 alias open='gnome-open'

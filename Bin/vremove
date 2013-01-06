@@ -9,6 +9,6 @@ then
 fi
 
 # execution 
-sudo apt-get remove $1 && sed -i -e '/install '$1'$/d' ~/Config/Log/apt-get
+sudo apt-get remove --purge $1 && sed -i -e '/install '$1'$/d' ~/Config/Log/apt-get
 exit 0
 
